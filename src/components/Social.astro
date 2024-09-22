@@ -1,0 +1,14 @@
+---
+const { platform_url, platform_name } = Astro.props;
+---
+
+<a href={platform_url} target="_blank">{platform_name}</a>
+
+<style>
+  a {
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: #4c1d95;
+    text-decoration: none;
+  }
+</style>
