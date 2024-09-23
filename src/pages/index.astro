@@ -1,11 +1,109 @@
 ---
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Hola! Soy Mia.">
-    <Header />
-	<main>
-		<h1 class="text-4xl sm:text-3xl font-bold sm:font-semibold">Mia</h1>
-	</main>
+  <Header />
+  <main>
+    <div class=" py-14">
+      <h1 class="text-3d sm:text-3xl font-bold sm:font-semibold">Mia</h1>
+    </div>
+    <div id="text" class="flex items-center justify-center self-center	">
+      <p class="w-[24vw] sm:w-[18vw] text-3d tracking-tight">Tu que crees... puedes leer esto sin marearte? Mira fijamente... sigue mirando... y ahora lee con atención y concéntrate, jaja, te duermes... ja</p>
+    </div>
+    <div id="text2" class="flex items-center justify-center self-center	">
+      <p class="w-[24vw] sm:w-[18vw] text-3d tracking-tight">... te duermes... te duermes...</p>
+    </div>
+  </main>
 </Layout>
+
+<style>
+  body {
+    box-sizing: border-box;
+    /* background-image: radial-gradient(circle, #cfcfcf, #bcb9bc, #aba3a8, #9c8e91, #8c7979); */
+  }
+
+  /* div {
+	transform-origin: center center;
+	transform-style: preserve-3d;
+	animation: move 5s ease-in infinite;
+	animation: move 5s ease-in-out infinite;
+} */
+  div {
+    /* animation: rotate 5s linear infinite; */
+    /* transform-origin: center center; */
+    transform-style: preserve-3d;
+    animation: move 22s linear infinite;
+    /* animation: move 5s ease-in infinite; */
+    /* animation: move 5s ease-in-out infinite; */
+  }
+  #text {
+	/* animation-delay: 2s; */
+	animation: move 18s linear infinite;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate3d(0, 0, 0, 90deg);
+    }
+    to {
+      transform: rotate3d(1, 1, 1, 360deg);
+    }
+  }
+
+  @keyframes move {
+    0%,
+    100% {
+      transform: rotate3d(-1, 1, 0, 40deg);
+      color: #acb7caf1;
+    }
+    25% {
+      transform: rotate3d(0, 1, 0, 40deg);
+      color: #d5dadfe8;
+    }
+    50% {
+      transform: rotate3d(-2, 0, 0, 40deg);
+      color: #c1b6c1e9;
+    }
+    75% {
+      transform: rotate3d(0, -18, 0, 40deg);
+      color: #e4d6e8f3;
+    }
+  }
+  h1 {
+	font-size: 12rem;
+  }
+  #text {
+	font-size: 0.4rem;
+  }
+  #text2 {
+	font-size: 0.3rem;
+  }
+  .text-3d {
+    /* text-transform: uppercase; */
+    /* font-size: 130px; */
+    /* color: #dedbdb; */
+    /* position: absolute;
+		top:50%;
+		left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    /* transform: translate(0%, 100%); */
+    text-shadow:
+      1px -1px 2px rgb(190, 190, 190),
+      2px -2px 4px rgb(185, 185, 185),
+      3px -3px 6px rgb(180, 180, 180),
+      4px -4px 6px rgb(175, 175, 175),
+      5px -5px 6px rgb(170, 170, 170),
+      6px -6px 10px rgb(165, 165, 165),
+      7px -7px 10px rgb(160, 160, 160),
+      8px -8px 6px rgb(155, 155, 155),
+      9px -9px 4px rgb(150, 150, 150),
+      10px -10px 2px rgb(145, 145, 145);
+
+    /* 0 1px 5px rgba(0,0,0,.05),
+			0 3px 5px rgba(0,0,0,.10),
+			0 5px 5px rgba(0,0,0,.15),
+			0 7px 5px rgba(0,0,0,.20),
+			0 10px 5px rgba(0,0,0,.25); */
+  }
+</style>
