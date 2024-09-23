@@ -1,11 +1,14 @@
 ---
-import BackButton from '../components/BackButton.astro';
 import Layout from '../layouts/Layout.astro';
+import BackButton from '../components/BackButton.astro';
+import { Image } from 'astro:assets';
+import mia_img from '../images/mia.jpeg';
 ---
 
 <Layout title="Portfolio Hola! Soy Mia.">
 	<BackButton />
 	<main>
+        <Image src={mia_img} alt="Foto header: esta soy yo" loading="eager" class="rounded-full size-10 sm:size-12" />
 		<h1 class="text-4xl sm:text-3xl font-bold sm:font-semibold" transition:name="link-portfolio">Portfolio</h1>
 	</main>
 </Layout>
