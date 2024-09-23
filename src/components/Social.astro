@@ -1,14 +1,26 @@
 ---
-const { platform_url, platform_name } = Astro.props;
+// Para usar .svg
+// https://ellodave.dev/blog/article/using-svgs-as-astro-components-and-inline-css/
+export interface Props {
+  icon: string;
+  platform_url: string;
+  platform_name: string;
+}
+
+const { icon, platform_url, platform_name } = Astro.props as Props;
+const { default: innerHTML } = await import(`../images/icons/${icon}.svg?raw`);
 ---
 
-<a href={platform_url} target="_blank">{platform_name}</a>
+<a href={ platform_url } target="_blank" class="flex items-center justify-center gap-2">
+  <Fragment set:html={innerHTML} />
+  { platform_name }
+</a>
 
 <style>
   a {
     padding: 0.5rem 1rem;
     color: white;
-    background-color: #4c1d95;
+    background-color: #2d2723;
     text-decoration: none;
   }
 </style>

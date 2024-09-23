@@ -1,17 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+import mia_img from '../images/mia.jpeg';
 import Navigation from "./Navigation.astro";
 ---
 
 <header class="bg-stone-900 flex justify-center w-[100vw]">
-    <!-- <div class="flex justify-between items-center py-3 w-[90%] sm:w-[76%] lg:w-[60%]"> -->
-    <div class="flex justify-between items-center py-3 w-[90%] sm:w-[76%] lg:w-[60%] text-xs sm:text-base">
-        <img class="rounded-full size-10 sm:size-12" src="/public/mia.jpeg" alt="Foto header: esta soy yo">
+    <div class="flex justify-between items-center py-2 w-[90%] sm:w-[76%] lg:w-[60%] text-xs sm:text-base">
+        <Image src={mia_img} alt="Foto header: esta soy yo" loading="eager" class="rounded-full size-10 sm:size-12" />
         <nav class="flex flex-row gap-x-6 sm:gap-x-8 lg:gap-x-10">
             <Navigation />
-            <!-- <a class="hover:underline" href="/">Home</a>
-            <a class="hover:underline" href="/portfolio/">Portfolio</a>
-            <a class="hover:underline" href="/proyectos/">Proyectos</a>
-            <a class="hover:underline" href="/contacto"/>Contacto</a> -->
         </nav>
     </div>
 </header>

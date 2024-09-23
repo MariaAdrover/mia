@@ -1,0 +1,9 @@
+---
+
+const { default: innerHTML } = await import(`../images/icons/home.svg?raw`);
+---
+
+<button class="flex items-center gap-2 p-2 w-fit">
+    <Fragment set:html={innerHTML} />
+    <a href="/" transition:name="link-mia" transition:name="link-mia">Mia</a>
+</button>
